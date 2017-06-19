@@ -1,4 +1,4 @@
-package bp;
+package demo;
 
 import java.util.Random;
 
@@ -115,7 +115,6 @@ public class BP {
 	 * @param inputSize
 	 * @param hiddenSize
 	 * @param outputSize
-	 * @param epoch
 	 */
 	public BP(int inputSize, int hiddenSize, int outputSize) {
 		this(inputSize, hiddenSize, outputSize, 0.25, 0.9);
