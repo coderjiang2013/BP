@@ -13,23 +13,25 @@ public class Test {
 
 		Random random = new Random();
 		List<Integer> list = new ArrayList<Integer>();
-		for (int i = 0; i != 1000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			int value = random.nextInt();
 			list.add(value);
 		}
 
-		for (int i = 0; i != 200; i++) {
+		for (int i = 0; i < 200; i++) {
 			for (int value : list) {
 				double[] real = new double[4];
-				if (value >= 0)
-					if ((value & 1) == 1)
-						real[0] = 1;
-					else
-						real[1] = 1;
-				else if ((value & 1) == 1)
-					real[2] = 1;
-				else
-					real[3] = 1;
+				if (value >= 0) {
+                    if ((value & 1) == 1) {
+                        real[0] = 1;
+                    } else {
+                        real[1] = 1;
+                    }
+                }else if ((value & 1) == 1) {
+                    real[2] = 1;
+                }else {
+                    real[3] = 1;
+                }
 				double[] binary = new double[32];
 				int index = 31;
 				do {
